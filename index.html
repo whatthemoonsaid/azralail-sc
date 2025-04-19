@@ -53,12 +53,13 @@
       padding: 6px 10px;
       cursor: pointer;
     }
-    
+
     .header {
       position: relative;
       height: 300px;
       background: url('azra-header.jpg') center/cover no-repeat;
     }
+
     .header-content {
       position: absolute;
       bottom: 20px;
@@ -66,15 +67,15 @@
       display: flex;
       align-items: center;
     }
+
     .profile-pic {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 4px solid #000;
       background: url('azra-pic.jpg') center/cover no-repeat;
       margin-right: 20px;
     }
-    
+
     .header-text h1,
     .header-text .username,
     .header-text .location {
@@ -85,6 +86,7 @@
       display: inline-block;
       font-weight: 600;
     }
+
     .header-text h1 {
       font-size: 1.6em;
       color: white;
@@ -93,11 +95,13 @@
       align-items: center;
       gap: 6px;
     }
+
     .header-text .username {
       font-size: 1em;
       color: #ccc;
       margin-bottom: 4px;
     }
+
     .header-text .location {
       font-size: 0.95em;
       color: #bbb;
@@ -107,7 +111,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: url('blue-tick.png') center/contain no-repeat; 
+      background: url('blue-tick.png') center/contain no-repeat;
       display: inline-block;
     }
 
@@ -139,8 +143,12 @@
       border-bottom: 2px solid white;
     }
 
+    .profile-buttons-inline {
+      display: flex;
+      gap: 10px;
+    }
+
     .profile-buttons-inline button {
-      margin-right: 8px;
       background: #222;
       color: white;
       border: 1px solid #444;
@@ -152,7 +160,6 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      
     }
 
     .main {
@@ -170,16 +177,85 @@
       margin-bottom: 20px;
     }
 
-    .track {
+    .track-item {
+      display: flex;
       background: var(--card-bg);
-      padding: 20px;
+      border-radius: 6px;
+      padding: 16px;
       margin-bottom: 20px;
-      border-radius: 4px;
     }
 
-    .track h3 {
-      margin: 0 0 10px;
+    .track-left img {
+      width: 100px;
+      height: 100px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .track-right {
+      flex: 1;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .track-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .track-top h3 {
+      margin: 0;
       font-size: 1.1em;
+    }
+
+    .track-top .artist {
+      font-weight: 600;
+      color: var(--gray-light);
+      font-size: 0.9em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .track-meta {
+      text-align: right;
+      font-size: 0.85em;
+      color: var(--gray-light);
+    }
+
+    .genre {
+      background: #333;
+      color: white;
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 0.75em;
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    .track-buttons {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .track-buttons button {
+      background: #2a2a2a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 0.85em;
+      cursor: pointer;
+    }
+
+    .play-count {
+      margin-left: auto;
+      color: var(--gray-light);
+      font-size: 0.85em;
     }
 
     audio {
@@ -273,7 +349,7 @@
 <body>
   <div class="navbar">
     <div class="logo">
-      <img src="soundcloud.svg" alt="logo" style="height:20px; vertical-align: middle; margin-right: 8px;">
+      <img src="soundcloud.jpg" alt="logo" style="height:20px; vertical-align: middle; margin-right: 8px;">
       SOUNDCL0UD
     </div>
     <input type="text" placeholder="Search for artists, bands, tracks, podcasts">
@@ -286,11 +362,11 @@
 
   <div class="header">
     <div class="header-content">
-    <div class="profile-pic"></div>
-    <div class="header-text">
-      <h1>Azra Lail Senandika <span class="verified-icon"></span></h1>
-      <div class="username">@azralail</div>
-      <div class="location">Jakarta, Indonesia</div>
+      <div class="profile-pic" style="border: none;"></div>
+      <div class="header-text">
+        <h1>Azra Lail Senandika <span class="verified-icon"></span></h1>
+        <div class="username">@azralail</div>
+        <div class="location">Jakarta, Indonesia</div>
       </div>
     </div>
   </div>
@@ -305,26 +381,45 @@
       <div>Reposts</div>
     </div>
     <div class="profile-buttons-inline">
-      <button>Station</button>
-      <button>Follow</button>
-      <button>Share</button>
-      <button> ... </button>
+      <button><span>📡</span> Station</button>
+      <button><span>➕</span> Follow</button>
+      <button><span>🔗</span> Share</button>
+      <button><span>⋯</span></button>
     </div>
   </div>
 
   <div class="main">
     <div class="left">
       <div class="section-title">Recent</div>
-      <div class="track">
-        <h3>Magnolia (demo)</h3>
-        <audio controls>
-          <source src="Magnolia.mp3" type="audio/mp3">
-        </audio>
-        <h3>Semua lagu cinta (demo)</h3>
-        <audio controls>
-          <source src="Semua-lagu-cinta.mp3" type="audio/mp3">
-        </audio>
+
+      <div class="track-item">
+        <div class="track-left">
+          <img src="cover.jpg" alt="cover">
+        </div>
+        <div class="track-right">
+          <div class="track-top">
+            <div>
+              <span class="artist">Azra Lail Senandika</span>
+              <h3>Magnolia (demo)</h3>
+            </div>
+            <div class="track-meta">
+              <div>2 days ago</div>
+              <div class="genre">#Indie</div>
+            </div>
+          </div>
+          <audio controls>
+            <source src="Magnolia.mp3" type="audio/mp3">
+          </audio>
+          <div class="track-buttons">
+            <button>❤️ 12</button>
+            <button>🔁 1</button>
+            <button>📤</button>
+            <button>💾</button>
+            <div class="play-count">▶ 541</div>
+          </div>
+        </div>
       </div>
+
     </div>
 
     <div class="right">
@@ -347,34 +442,12 @@
 
       <div class="extra-section">
         <h4>FANS ALSO LIKE</h4>
-        <div class="user-row">
-          <div class="user"><img src="similar-user-1.jpg"><span>MALID & D'Essentials</span></div>
-          <button>Follow</button>
-        </div>
-        <div class="user-row">
-          <div class="user"><img src="similar-user-2.jpg"><span>Bilal Indrajaya</span></div>
-          <button>Follow</button>
-        </div>
-        <div class="user-row">
-          <div class="user"><img src="similar-user-3.jpg"><span>Rich Brian</span></div>
-          <button>Follow</button>
-        </div>
+        <!-- similar user cards -->
       </div>
 
       <div class="extra-section">
         <h4>6 FOLLOWING</h4>
-        <div class="user-row">
-          <div class="user"><img src="following-user-1.jpg"><span>Laleilmanino</span></div>
-          <button>Follow</button>
-        </div>
-        <div class="user-row">
-          <div class="user"><img src="following-user-2.jpg"><span>Hivi!</span></div>
-          <button>Follow</button>
-        </div>
-        <div class="user-row">
-          <div class="user"><img src="following-user-3.jpg"><span>Bernadya</span></div>
-          <button>Follow</button>
-        </div>
+        <!-- following user cards -->
       </div>
 
       <div class="extra-section">
@@ -382,13 +455,8 @@
         <div class="comments">
           <p>on Magnolia (demo)</p>
           <p>"<strong>@plastictrees</strong>: Thank you udah dengerin!”</p>
-          <p>on Magnolia (demo)</p>
-          <p>"<strong>@laleilmanino</strong>: Haha gua sih ayo banget”</p>
-          <p>on Magnolia (demo)</p>
-          <p>"<strong>@bernadya</strong>: Thank you for giving life to this song nadya”</p>
         </div>
       </div>
-
     </div>
   </div>
 </body>
