@@ -126,8 +126,14 @@
       color: white;
       border: 1px solid #444;
       border-radius: 4px;
-      padding: 6px 12px;
+      padding: 8px 16px;
+      font-size: 0.95em;
+      font-weight: 600;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      
     }
 
     .main {
@@ -247,7 +253,10 @@
 </head>
 <body>
   <div class="navbar">
-    <div class="logo">SOUNDCL0UD</div>
+    <div class="logo">
+      <img src="soundcloud.svg" alt="logo" style="height:20px; vertical-align: middle; margin-right: 8px;">
+      SOUNDCL0UD
+    </div>
     <input type="text" placeholder="Search for artists, bands, tracks, podcasts">
     <div class="right">
       <button>Sign In</button>
@@ -275,9 +284,9 @@
       <div>Reposts</div>
     </div>
     <div class="profile-buttons-inline">
-      <button>Station</button>
-      <button>Follow</button>
-      <button>Share</button>
+      <button><img src="station.png" style="width:16px;"> Station</button>
+      <button><img src="follow.png" style="width:16px;"> Follow</button>
+      <button<img src="share.png" style="width:16px;"> >Share</button>
     </div>
   </div>
 
@@ -293,9 +302,9 @@
     </div>
 
     <div class="right">
-      <div class="stat">1,204<span>Followers</span></div>
+      <div class="stat">497,032<span>Followers</span></div>
       <div class="stat">89<span>Following</span></div>
-      <div class="stat">3<span>Tracks</span></div>
+      <div class="stat">30<span>Tracks</span></div>
       <div class="bio">
         I write songs sometimes.
       </div>
@@ -346,11 +355,11 @@
         <h4>LATEST COMMENTS</h4>
         <div class="comments">
           <p>on Magnolia (demo)</p>
-          <p><strong>"@plastictrees</strong>: Thank you udah dengerin!”</p>
+          <p>"<strong>@plastictrees</strong>: Thank you udah dengerin!”</p>
           <p>on Magnolia (demo)</p>
-          <p><strong>@laleilmanino</strong>: Haha gua sih ayo banget”</p>
+          <p>"<strong>@laleilmanino</strong>: Haha gua sih ayo banget”</p>
           <p>on Magnolia (demo)</p>
-          <p><strong>@bernadya</strong>: Thank you for giving life to this song nadya”</p>
+          <p>"<strong>@bernadya</strong>: Thank you for giving life to this song nadya”</p>
         </div>
       </div>
 
