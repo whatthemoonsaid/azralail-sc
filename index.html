@@ -12,6 +12,7 @@
       --gray-light: #999;
       --bg: #111;
       --text: #fff;
+      --card-bg: #1a1a1a;
     }
 
     body {
@@ -79,6 +80,13 @@
       margin-bottom: 4px;
     }
 
+    .profile-info h1::after {
+      content: " \2713";
+      color: #1da1f2;
+      font-size: 0.7em;
+      vertical-align: super;
+    }
+
     .profile-info .location {
       font-size: 0.95em;
       color: var(--gray-light);
@@ -125,7 +133,7 @@
     }
 
     .track {
-      background: #1a1a1a;
+      background: var(--card-bg);
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 4px;
@@ -141,7 +149,7 @@
     }
 
     .right {
-      width: 250px;
+      width: 300px;
       margin-left: 40px;
     }
 
@@ -164,17 +172,65 @@
       color: var(--gray-light);
     }
 
-    .links {
+    .links, .extra {
       margin-top: 20px;
     }
 
-    .links a {
+    .links a, .extra a {
       display: block;
       color: var(--gray-light);
       margin-bottom: 5px;
       text-decoration: none;
       font-size: 0.9em;
     }
+
+    .extra-section {
+      margin-top: 40px;
+    }
+
+    .extra-section h4 {
+      font-size: 1em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .user-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .user-row .user {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-row img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .user-row button {
+      background: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .comments {
+      font-size: 0.85em;
+      color: var(--gray-light);
+    }
+
+    .comments p {
+      margin-bottom: 6px;
+    }
+
   </style>
 </head>
 <body>
@@ -194,7 +250,7 @@
 
   <div class="profile-info">
     <h1>Azra Lail Senandika</h1>
-    <div class="location">Yogyakarta, Indonesia</div>
+    <div class="location">Jakarta, Indonesia</div>
     <div class="profile-buttons">
       <button>Station</button>
       <button>Follow</button>
@@ -214,7 +270,7 @@
   <div class="main">
     <div class="left">
       <div class="track">
-        <h3>Origami Heart (demo)</h3>
+        <h3>Magnolia (demo)</h3>
         <audio controls>
           <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
         </audio>
@@ -222,12 +278,13 @@
     </div>
 
     <div class="right">
-      <div class="stat">1,204<span>Followers</span></div>
+      <div class="stat">97,204<span>Followers</span></div>
       <div class="stat">89<span>Following</span></div>
-      <div class="stat">3<span>Tracks</span></div>
+      <div class="stat">30<span>Tracks</span></div>
       <div class="bio">
-        glad you could make it<br>azra writes quiet songs for loud feelings
+        I write songs sometimes.
       </div>
+
       <div class="links">
         <a href="#">twitter</a>
         <a href="#">insta</a>
@@ -237,6 +294,48 @@
         <a href="#">youtube</a>
         <a href="#">all links</a>
       </div>
+
+      <div class="extra-section">
+        <h4>FANS ALSO LIKE</h4>
+        <div class="user-row">
+          <div class="user"><img src="https://via.placeholder.com/30"><span>MALIQ & D'Essentials ✓</span></div>
+          <button>Follow</button>
+        </div>
+        <div class="user-row">
+          <div class="user"><img src="https://via.placeholder.com/30"><span>Bilal Indrajaya</span></div>
+          <button>Follow</button>
+        </div>
+        <div class="user-row">
+          <div class="user"><img src="https://via.placeholder.com/30"><span>Sam Ock</span></div>
+          <button>Follow</button>
+        </div>
+      </div>
+
+      <div class="extra-section">
+        <h4>6 FOLLOWING</h4>
+        <div class="user-row">
+          <div class="user"><img src="https://via.placeholder.com/30"><span>Laleilmanino</span></div>
+          <button>Follow</button>
+        </div>
+        <div class="user-row">
+          <div class="user"><img src="https://via.placeholder.com/30"><span>Hivi!</span></div>
+          <button>Follow</button>
+        </div>
+        <div class="user-row">
+          <div class="user"><img src="https://via.placeholder.com/30"><span>Bernadya</span></div>
+          <button>Follow</button>
+        </div>
+      </div>
+
+      <div class="extra-section">
+        <h4>LATEST COMMENTS</h4>
+        <div class="comments">
+          <p><strong>@plastictrees</strong>: semangat masss”</p>
+          <p><strong>@heyyyy9098</strong>: MANIS BGT :"(”</p>
+          <p><strong>@nadiasesa</strong>: my fav song to listen to in the car”</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </body>
