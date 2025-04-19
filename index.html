@@ -1,235 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azra Lail Senandika | @azralail</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SoundCloud+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
   <style>
     :root {
       --orange: #ff5500;
-      --gray: #f2f2f2;
-      --dark: #333;
+      --gray-dark: #222;
+      --gray-light: #999;
+      --bg: #111;
+      --text: #fff;
     }
 
     body {
       margin: 0;
-      font-family: 'SoundCloud Sans', 'Helvetica Neue', sans-serif;
-      background-color: var(--gray);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     .navbar {
-      background-color: var(--dark);
-      color: white;
+      background-color: #000;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      justify-content: space-between;
-    }
-
-    .navbar .left, .navbar .right {
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar input {
-      margin-left: 20px;
-      padding: 5px;
-      border-radius: 4px;
-      border: none;
     }
 
     .navbar .logo {
+      font-size: 1.2em;
       font-weight: bold;
-      color: var(--orange);
     }
 
-    .navbar button {
-      margin-left: 15px;
-      background: var(--orange);
+    .navbar input {
+      background: #333;
       border: none;
+      border-radius: 4px;
+      padding: 6px;
       color: white;
+    }
+
+    .navbar .right button {
+      margin-left: 10px;
+      background: var(--orange);
+      color: white;
+      border: none;
+      border-radius: 4px;
       padding: 6px 10px;
-      border-radius: 3px;
       cursor: pointer;
     }
 
-    .container {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .sidebar {
-      width: 250px;
-      background: white;
-      padding: 20px;
-      border-left: 1px solid #ddd;
-      font-size: 0.95em;
-    }
-
-    .sidebar h3 {
-      margin-top: 0;
-      color: #888;
-      font-weight: 600;
-      font-size: 0.95em;
-      text-transform: uppercase;
-    }
-
-    .sidebar .stat {
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .sidebar .link {
-      color: #333;
-      margin: 8px 0;
-      display: block;
-      text-decoration: none;
-    }
-
-    .main {
-      flex: 1;
-    }
-
-    .banner {
-      background: url('azra-header.jpg') no-repeat center/cover;
-      height: 300px;
+    .header {
       position: relative;
+      height: 300px;
+      background: url('azra-header.jpg') center/cover no-repeat;
     }
 
     .profile-pic {
       position: absolute;
       bottom: -60px;
-      left: 30px;
+      left: 40px;
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 4px solid white;
+      border: 4px solid #000;
       background: url('azra-pic.jpg') center/cover no-repeat;
     }
 
     .profile-info {
-      padding: 80px 30px 20px 30px;
-      background: white;
+      padding: 80px 40px 20px;
     }
 
     .profile-info h1 {
-      margin: 0;
+      font-size: 1.8em;
       font-weight: 600;
+      margin-bottom: 4px;
     }
 
-    .buttons {
-      margin-top: 10px;
+    .profile-info .location {
+      font-size: 0.95em;
+      color: var(--gray-light);
     }
 
-    .buttons button {
-      background: white;
-      border: 1px solid #ccc;
+    .profile-buttons {
+      margin-top: 15px;
+    }
+
+    .profile-buttons button {
       margin-right: 10px;
-      padding: 5px 10px;
-      border-radius: 3px;
+      background: #222;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .nav-tabs {
+      display: flex;
+      padding: 0 40px;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-tabs div {
+      margin-right: 20px;
+      padding-bottom: 10px;
       cursor: pointer;
       font-weight: 600;
     }
 
-    .bio {
-      margin-top: 15px;
-      color: #555;
-      font-size: 0.95em;
+    .nav-tabs .active {
+      border-bottom: 2px solid white;
     }
 
-    .tracks, .reposts, .comments {
-      padding: 30px;
+    .main {
+      display: flex;
+      padding: 30px 40px;
     }
 
-    .track, .repost, .comment {
-      background: white;
-      padding: 15px;
-      border-left: 5px solid var(--orange);
+    .left {
+      flex: 1;
+    }
+
+    .track {
+      background: #1a1a1a;
+      padding: 20px;
       margin-bottom: 20px;
+      border-radius: 4px;
     }
 
-    .comment {
-      border-left-color: #ccc;
+    .track h3 {
+      margin: 0 0 10px;
+      font-size: 1.1em;
     }
 
     audio {
       width: 100%;
-      margin-top: 10px;
+    }
+
+    .right {
+      width: 250px;
+      margin-left: 40px;
+    }
+
+    .right .stat {
+      font-weight: 600;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    .right .stat span {
+      display: block;
+      font-size: 0.85em;
+      font-weight: normal;
+      color: var(--gray-light);
+    }
+
+    .bio {
+      margin-top: 20px;
+      font-size: 0.95em;
+      color: var(--gray-light);
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: block;
+      color: var(--gray-light);
+      margin-bottom: 5px;
+      text-decoration: none;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <div class="navbar">
-    <div class="left">
-      <div class="logo">soundmock</div>
-      <input type="text" placeholder="Search..." />
-    </div>
+    <div class="logo">SOUNDCLOUD</div>
+    <input type="text" placeholder="Search for artists, bands, tracks, podcasts">
     <div class="right">
-      <button>Upload</button>
       <button>Sign In</button>
+      <button>Create account</button>
+      <button>Upload</button>
     </div>
   </div>
 
-  <div class="container">
-    <div class="main">
-      <div class="banner">
-        <div class="profile-pic"></div>
-      </div>
+  <div class="header">
+    <div class="profile-pic"></div>
+  </div>
 
-      <div class="profile-info">
-        <h1>@azralail</h1>
-        <div class="buttons">
-          <button>Follow</button>
-          <button>Share</button>
-          <button>Station</button>
-        </div>
-        <div class="bio">
-          azra writes quiet songs for loud feelings. genre: indiefolk x lo-fi moodcore.
-        </div>
-      </div>
+  <div class="profile-info">
+    <h1>Azra Lail Senandika</h1>
+    <div class="location">Yogyakarta, Indonesia</div>
+    <div class="profile-buttons">
+      <button>Station</button>
+      <button>Follow</button>
+      <button>Share</button>
+    </div>
+  </div>
 
-      <div class="tracks">
-        <h2>Tracks</h2>
-        <div class="track">
-          <strong>Origami Heart (demo)</strong>
-          <audio controls>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-          </audio>
-        </div>
-      </div>
+  <div class="nav-tabs">
+    <div class="active">All</div>
+    <div>Popular tracks</div>
+    <div>Tracks</div>
+    <div>Albums</div>
+    <div>Playlists</div>
+    <div>Reposts</div>
+  </div>
 
-      <div class="reposts">
-        <h2>Reposts</h2>
-        <div class="repost">
-          Azra reposted <strong>Cloud Sleep – Eternal Droplets</strong>
-          <audio controls>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
-          </audio>
-        </div>
-      </div>
-
-      <div class="comments">
-        <h2>Comments</h2>
-        <div class="comment">
-          <strong>user123</strong>: this track hits different at 2am 🌒
-        </div>
-        <div class="comment">
-          <strong>lilghost</strong>: haunting and beautiful.
-        </div>
+  <div class="main">
+    <div class="left">
+      <div class="track">
+        <h3>Origami Heart (demo)</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
       </div>
     </div>
 
-    <div class="sidebar">
-      <h3>Stats</h3>
-      <div class="stat">1,204 Followers</div>
-      <div class="stat">89 Following</div>
-      <div class="stat">3 Tracks</div>
-      <hr>
-      <h3>Links</h3>
-      <a href="#" class="link">Website</a>
-      <a href="#" class="link">Instagram</a>
-      <a href="#" class="link">Email</a>
+    <div class="right">
+      <div class="stat">1,204<span>Followers</span></div>
+      <div class="stat">89<span>Following</span></div>
+      <div class="stat">3<span>Tracks</span></div>
+      <div class="bio">
+        glad you could make it<br>azra writes quiet songs for loud feelings
+      </div>
+      <div class="links">
+        <a href="#">twitter</a>
+        <a href="#">insta</a>
+        <a href="#">spotify</a>
+        <a href="#">facebook</a>
+        <a href="#">website</a>
+        <a href="#">youtube</a>
+        <a href="#">all links</a>
+      </div>
     </div>
   </div>
 </body>
