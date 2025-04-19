@@ -126,6 +126,7 @@
       align-items: center;
       padding: 0 40px;
       border-bottom: 1px solid #333;
+      margin-top: 20px;
     }
 
     .nav-tabs {
@@ -252,6 +253,11 @@
       cursor: pointer;
     }
 
+    .btn-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
     .play-count {
       margin-left: auto;
       color: var(--gray-light);
@@ -345,6 +351,7 @@
       margin-bottom: 6px;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="navbar">
@@ -381,9 +388,10 @@
       <div>Reposts</div>
     </div>
     <div class="profile-buttons-inline">
-      <button><span>📡</span> Station</button>
-      <button><span>➕</span> Follow</button>
-      <button><span>🔗</span> Share</button>
+      <button><img src="icons-station.png" alt="Station" class="btn-icon">
+    Station</button>
+      <button><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Follow</button>
+      <button><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i> Share</button>
       <button><span>⋯</span></button>
     </div>
   </div>
@@ -394,7 +402,7 @@
 
       <div class="track-item">
         <div class="track-left">
-          <img src="cover.jpg" alt="cover">
+          <img src="magnolia-cover.jpg" alt="cover">
         </div>
         <div class="track-right">
           <div class="track-top">
@@ -411,11 +419,11 @@
             <source src="Magnolia.mp3" type="audio/mp3">
           </audio>
           <div class="track-buttons">
-            <button>❤️ 12</button>
-            <button>🔁 1</button>
-            <button>📤</button>
-            <button>💾</button>
-            <div class="play-count">▶ 541</div>
+            <button><i class="fa-solid fa-heart" style="color: #ffffff;"></i> 12</button>
+            <button><i class="fa-solid fa-retweet" style="color: #ffffff;"></i> 1</button>
+            <button><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i></button>
+            <button><i class="fa-regular fa-clone" style="color: #ffffff;"></i></button>
+            <div class="play-count">▶ 98.4K</div>
           </div>
         </div>
       </div>
