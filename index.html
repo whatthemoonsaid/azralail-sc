@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azra Lail Senandika | SoundCloud Mock</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff5500;
+      color: white;
+      padding: 1.2em;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1em;
+    }
+
+    header h1 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 0.9em;
+      opacity: 0.85;
+    }
+
+    .profile-info {
+      background: white;
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .username {
+      color: #999;
+      font-size: 0.95em;
+    }
+
+    .bio {
+      font-size: 1em;
+    }
+
+    .tracklist {
+      padding: 1.5em;
+    }
+
+    .track {
+      background: white;
+      padding: 1em;
+      margin-bottom: 1em;
+      border: 1px solid #ddd;
+      border-left: 5px solid #ff5500;
+    }
+
+    .track h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 0.5em;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.8em;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header img {
+        margin-bottom: 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://via.placeholder.com/50x50.png?text=A" alt="Azra's avatar" />
+    <div>
+      <h1>Azra Lail Senandika</h1>
+      <p>@azralail</p>
+    </div>
+  </header>
+
+  <div class="profile-info">
+    <div class="username">indie · yogyakarta · songwriter</div>
+    <div class="bio">azra lail senandika is a quiet architect of sound. his work echoes memory, distance, and a longing for stillness. currently working on a new EP.</div>
+  </div>
+
+  <div class="tracklist">
+    <div class="track">
+      <h3>Postcards to No One</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="track">
+      <h3>Monsoon Letters (demo)</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="track">
+      <h3>Echoverse (live)</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="footer">
+    This is a fictional SoundCloud-style artist page for creative use. Azra Lail Senandika is not a real person (yet).
+  </div>
+
+</body>
+</html>
