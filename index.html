@@ -10,34 +10,27 @@
       .navbar {
         flex-direction: column;
         align-items: flex-start;
-      }
-      .navbar input {
-        width: 100%;
-        margin: 10px 0;
-      }
-      .navbar .right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-      .navbar .right button {
-        width: 100%;
-        margin: 5px 0;
+        gap: 10px;
       }
       .header-content {
         flex-direction: column;
         align-items: flex-start;
-        bottom: 10px;
         left: 20px;
+        bottom: 20px;
       }
       .profile-pic {
-        margin-bottom: 10px;
+        margin: 0 0 16px 0;
       }
       .nav-tabs-row {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
         padding: 20px;
-        gap: 16px;
+      }
+      .profile-buttons-inline {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
       }
       .main {
         flex-direction: column;
@@ -46,28 +39,29 @@
       .right {
         width: 100%;
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 40px;
       }
       .track-item {
         flex-direction: column;
+        align-items: flex-start;
       }
       .track-left img {
         width: 100%;
         height: auto;
+        border-radius: 8px;
       }
       .track-right {
         margin-left: 0;
         margin-top: 16px;
       }
       .track-buttons {
-        flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        gap: 8px;
+        justify-content: flex-start;
       }
-      .play-count {
-        margin-left: 0;
-        margin-top: 10px;
+      .track-buttons button {
+        flex: 1 1 auto;
+        min-width: 48%;
+        margin-bottom: 8px;
       }
     }
 
