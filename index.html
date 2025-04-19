@@ -4,127 +4,219 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Azra Lail Senandika | @azralail</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap">
   <style>
     :root {
       --orange: #ff5500;
+      --gray: #f2f2f2;
+      --dark: #333;
     }
 
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f2f2f2;
-      color: #222;
+      background-color: var(--gray);
+    }
+
+    .navbar {
+      background-color: var(--dark);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      justify-content: space-between;
+    }
+
+    .navbar .left, .navbar .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar input {
+      margin-left: 20px;
+      padding: 5px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .navbar .logo {
+      font-weight: bold;
+      color: var(--orange);
+    }
+
+    .navbar button {
+      margin-left: 15px;
+      background: var(--orange);
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: white;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      color: #888;
+    }
+
+    .sidebar .link {
+      color: #333;
+      margin: 8px 0;
+      display: block;
+      text-decoration: none;
+    }
+
+    .main {
+      flex: 1;
     }
 
     .banner {
-      background: url('https://via.placeholder.com/1200x300/ff5500/ffffff?text=Azra+Lail+Senandika') center/cover no-repeat;
+      background: url('https://via.placeholder.com/1200x300/ff5500/ffffff?text=Azra+Lail') no-repeat center/cover;
       height: 300px;
       position: relative;
     }
 
     .profile-pic {
-      width: 140px;
-      height: 140px;
+      position: absolute;
+      bottom: -60px;
+      left: 30px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       border: 4px solid white;
-      position: absolute;
-      bottom: -70px;
-      left: 40px;
-      background: url('https://via.placeholder.com/140x140.png?text=A') center/cover no-repeat;
+      background: url('https://via.placeholder.com/120.png?text=A') center/cover no-repeat;
     }
 
     .profile-info {
-      padding: 90px 40px 30px 40px;
+      padding: 80px 30px 20px 30px;
       background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    .artist-name {
-      font-size: 1.8em;
-      font-weight: bold;
+    .profile-info h1 {
+      margin: 0;
     }
 
-    .handle {
-      color: #666;
-      margin-top: 4px;
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      background: white;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
     }
 
     .bio {
-      margin-top: 10px;
-      font-size: 0.95em;
-      max-width: 600px;
+      margin-top: 15px;
+      color: #555;
     }
 
-    .tracks {
-      padding: 30px 40px;
+    .tracks, .reposts, .comments {
+      padding: 30px;
     }
 
-    .track {
+    .track, .repost, .comment {
       background: white;
-      margin-bottom: 20px;
-      padding: 20px;
+      padding: 15px;
       border-left: 5px solid var(--orange);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+      margin-bottom: 20px;
     }
 
-    .track h3 {
-      margin: 0;
-      font-size: 1.2em;
+    .comment {
+      border-left-color: #ccc;
     }
 
     audio {
       width: 100%;
       margin-top: 10px;
     }
-
-    .footer {
-      text-align: center;
-      font-size: 0.8em;
-      color: #999;
-      padding: 30px 10px;
-    }
   </style>
 </head>
 <body>
-
-  <div class="banner">
-    <div class="profile-pic"></div>
-  </div>
-
-  <div class="profile-info">
-    <div class="artist-name">Azra Lail Senandika</div>
-    <div class="handle">@azralail</div>
-    <div class="bio">
-      azra writes quiet songs for loud feelings. genre: indiefolk x lo-fi moodcore. sometimes haunted. sometimes healing.
+  <div class="navbar">
+    <div class="left">
+      <div class="logo">soundmock</div>
+      <input type="text" placeholder="Search..." />
+    </div>
+    <div class="right">
+      <button>Upload</button>
+      <button>Sign In</button>
     </div>
   </div>
 
-  <div class="tracks">
-    <div class="track">
-      <h3>Origami Heart (demo)</h3>
-      <audio controls>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
-      </audio>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Azra Lail Senandika</h3>
+      <a href="#" class="link">Followers: 1,204</a>
+      <a href="#" class="link">Following: 89</a>
+      <a href="#" class="link">Tracks: 3</a>
+      <hr>
+      <a href="#" class="link">Website</a>
+      <a href="#" class="link">Instagram</a>
+      <a href="#" class="link">Email</a>
     </div>
 
-    <div class="track">
-      <h3>Postcards to No One</h3>
-      <audio controls>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3" />
-      </audio>
-    </div>
+    <div class="main">
+      <div class="banner">
+        <div class="profile-pic"></div>
+      </div>
 
-    <div class="track">
-      <h3>Monsoon Letters (live at EchoVerse)</h3>
-      <audio controls>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mp3" />
-      </audio>
+      <div class="profile-info">
+        <h1>@azralail</h1>
+        <div class="buttons">
+          <button>Follow</button>
+          <button>Share</button>
+          <button>Station</button>
+        </div>
+        <div class="bio">
+          azra writes quiet songs for loud feelings. genre: indiefolk x lo-fi moodcore.
+        </div>
+      </div>
+
+      <div class="tracks">
+        <h2>Tracks</h2>
+        <div class="track">
+          <strong>Origami Heart (demo)</strong>
+          <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+
+      <div class="reposts">
+        <h2>Reposts</h2>
+        <div class="repost">
+          Azra reposted <strong>Cloud Sleep – Eternal Droplets</strong>
+          <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+
+      <div class="comments">
+        <h2>Comments</h2>
+        <div class="comment">
+          <strong>user123</strong>: this track hits different at 2am 🌒
+        </div>
+        <div class="comment">
+          <strong>lilghost</strong>: haunting and beautiful.
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="footer">
-    Fictional artist page for creative use. Inspired by SoundCloud. Azra Lail Senandika © 2025.
-  </div>
-
 </body>
 </html>
