@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
   <style>
     @media (max-width: 768px) {
-        .right {
-          width: 100%;
-          margin-left: 0;
-          margin-top: 40px;
+      .right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 40px;
         }
       .right .stat {
         display: inline-block;
         text-align: center;
         font-size: 0.7em;
+        gap: 5px;
       }
       .right .stat span {
         font-size: 0.45em;
@@ -49,11 +50,7 @@
         flex-direction: column;
         padding: 20px;
       }
-      .right {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 40px;
-      }
+
       .track-item {
         flex-direction: column;
         align-items: flex-start;
@@ -68,6 +65,9 @@
         margin-top: 16px;
       }
       .track-buttons {
+        display: none;
+      }
+      .play-count {
         display: none;
       }
       
