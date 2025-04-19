@@ -7,14 +7,20 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
   <style>
     @media (max-width: 768px) {
-      .right .stat {
+      .stat-group {
+        display: flex;
+        justify-content: center; 
+        gap: 32px; 
+        margin-bottom: 20px;
+      }
+      .stat {
         display: inline-block;
         text-align: center;
         font-size: 0.7em;
-        gap: 300px;
       }
-      .right .stat span {
+      .stat span {
         font-size: 0.45em;
+        display: block;
       }
       .main {
         flex-direction: column;
@@ -542,9 +548,11 @@
       </div>
     
       <div class="right">
-        <div class="stat">497,032<span>Followers</span></div>
-        <div class="stat">89<span>Following</span></div>
-        <div class="stat">30<span>Tracks</span></div>
+        <div class="stat-group">
+          <div class="stat">497,032<span>Followers</span></div>
+          <div class="stat">89<span>Following</span></div>
+          <div class="stat">30<span>Tracks</span></div>
+        </div>
         <div class="bio">
           I write songs sometimes.
         </div>
